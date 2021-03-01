@@ -99,24 +99,7 @@
         margin-bottom: 8px;
         &:last-child {
             margin-bottom: 1px;
-        }
-        :global(&.sortable-ghost) {
-            position: relative;
-            opacity: .1;
-            &::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: #000;
-                border-radius: 4px;
-            }
-        }
-        :global(&.sortable-chosen){
-            cursor: move;
-        }
+        }        
         .title {
             background: #fff;
             padding: 6px 8px;
@@ -137,6 +120,23 @@
             &:hover .btn {
                 display: block;
             }
+        }        
+    }
+    :global(.card.sortable-ghost) {
+        position: relative;
+        opacity: .1;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 4px;
         }
+    }
+    :global(.card.sortable-chosen){
+        cursor: move;
     }
 </style>
